@@ -1,0 +1,198 @@
+/* INDEX OF CONTENTS:
+
+1) General Styles
+2) html, body
+3) #login
+4) #app
+5) #form-container
+6) #todo-list-container
+
+===================== */
+
+/* 1) General Styles */
+* {box-sizing: border-box;}
+*, html {font-family: 'Montserrat', sans-serif; font-size: 16px;}
+::placeholder {color: #2b4162; opacity: 1;}
+:-ms-input-placeholder {color: #2b4162;}
+::-ms-input-placeholder {color: #2b4162;}
+.hidden {display: none !important;}
+
+/* 2) html, body */
+html, body {width: 100%; height: 100%;}
+
+/* 3) #login */
+#login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(37,207,63,1);
+    background: -moz-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(37,207,63,1)), color-stop(100%, rgba(130,255,149,1)));
+    background: -webkit-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: -o-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: -ms-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: linear-gradient(to bottom, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25cf3f', endColorstr='#82ff95', GradientType=0 );
+}
+#login form {
+    padding: 4rem 2rem 0.5rem;
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 3rem;
+    box-shadow: 0px 30px 50px rgba(0,0,0,0.20);
+}
+#login form p {
+    color: #2b4162;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#login form input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 2px solid #eee;
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 30px;
+    outline: none;
+    color: #2b4162;
+}
+#login form input.input-error {border: 2px solid #e82020;}
+#login form input.input-success {border: 2px solid limegreen;}
+#login form input[type=submit] {
+    border: none;
+    background-color: #2b4162;
+    color: #fff;
+    cursor: pointer;
+}
+#login form input::placeholder {color: #aaa; opacity: 1;}
+#login form input:-ms-input-placeholder {color: #aaa;}
+#login form input::-ms-input-placeholder {color: #aaa;}
+
+
+/* 4) #app */
+#app {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgba(37,207,63,1);
+    background: -moz-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(37,207,63,1)), color-stop(100%, rgba(130,255,149,1)));
+    background: -webkit-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: -o-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: -ms-linear-gradient(top, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    background: linear-gradient(to bottom, rgba(37,207,63,1) 0%, rgba(130,255,149,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25cf3f', endColorstr='#82ff95', GradientType=0 );
+}
+
+/* 5) #form-container */
+#form-container {
+    height: 35%;
+    padding: 0 2rem;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+}
+#form-container form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+#form-container form input {
+    border: 0;
+    background: none;
+    color: #2b4162;
+    font-size: 1.5em;
+    outline: none;
+    width: 100%;
+    display: block;
+}
+
+/* 6) #todo-list-container */
+#todo-list-container {
+    position: fixed;
+    top: 35%; bottom: 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #2b4162;
+    padding: 5rem 2rem;
+}
+#todo-list-container > p {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #25cf3f;
+    font-size: 0.85rem;
+}
+#todo-list-container > ul {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#todo-list-container > ul > li {
+    margin-top: 30px;
+    padding: 0 15px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+#todo-list-container > ul > li > button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: absolute;
+    right: 30px;
+    font-size: 0.85rem;
+    color: #2b4162;
+    cursor: pointer;
+    outline: none;
+}
+#todo-list-container > ul > li > .todo-toggle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #25cf3f;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#todo-list-container > ul > li > .todo-toggle.done {border-color: #ccc;}
+#todo-list-container > ul > li > .todo-toggle.done::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+#todo-list-container > ul > li > .todo-title {
+    color: #2b4162;
+    padding: 0 5px;
+    outline: none;
+    margin-left: 15px;
+    display: inline-block;
+    position: relative;
+}
+#todo-list-container > ul > li > .todo-title.done {color: #bbb;}
+#todo-list-container > ul > li > .todo-title.done::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #bbb;
+    position: absolute;
+    top: 50%; left: 0;
+}
